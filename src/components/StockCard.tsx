@@ -9,9 +9,8 @@ interface StockCardProps {
   currentPrice: number;
   highPrice: number;
   lowPrice: number;
-  isUpwardTrend: boolean; // Determines whether the trend is upward or downward
-}
-
+  isUpwardTrend: boolean; 
+};
 const StockCard: React.FC<StockCardProps> = ({
   stockName,
   change,
@@ -64,7 +63,7 @@ const StockCard: React.FC<StockCardProps> = ({
       </div>
 
       
-      <div className="text-blue-500 flex flex-wrap gap-1 text-xs justify-center">
+      <div className="text-blue-500 flex flex-wrap gap-0.5 text-xs justify-center">
         <Link href="#">Analytics</Link>|
         <Link href="#">Options</Link>|
         <Link href="#">PCR</Link>|

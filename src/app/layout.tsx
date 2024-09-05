@@ -26,11 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} `}
       >
-        <Navbar />
+        <Navbar/>
+        <section className="mx-96">
         {children}
+        </section>
       </body>
     </html>
   );
