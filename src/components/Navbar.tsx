@@ -2,13 +2,14 @@ import { Search } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const Navbar = () => {
     return (
         <nav className=" relative border-b-4 w-full">
             <div className="sm:relative flex sm:justify-normal justify-between items-center p-4 mx-24">
                 <div className="flex lg:items-center space-x-2 sm:mx-4">
-                    <img src="/logo.png" alt="Logo" className="h-8 w-8" />
+                    <Image src="/logo.png" alt="Logo" className="h-8 w-8" />
                     <span className="text-lg font-bold">Spurzee Technologies</span>
                 </div>
 

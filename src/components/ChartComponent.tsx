@@ -1,5 +1,5 @@
-// components/ChartComponent.tsx
-"use client"; // This tells Next.js it's a Client Component
+
+"use client";
 
 import React, { useRef, useEffect } from "react";
 import { createChart, ColorType, ISeriesApi } from "lightweight-charts";

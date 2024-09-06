@@ -3,8 +3,8 @@ import StockCard from "@/components/StockCard";
 import ChartComponent from '@/components/ChartComponent';
 import Marketable from "@/components/marketTable";
 import GetStarted from "@/components/getstarted";
-import MarketComponent from "@/components/indianMarkets";
-import { usIndices, europeanIndices, asianIndices } from "@/data/data";
+
+
 export default function Home() {
 
   const initialData = [
@@ -61,7 +61,7 @@ export default function Home() {
         <h1>Stock Market Chart</h1>
         <ChartComponent data={initialData} />
       </div>
-      <MarketComponent usIndices={usIndices} europeanIndices={europeanIndices} asianIndices={asianIndices} />
+
     </div>
   );
 }

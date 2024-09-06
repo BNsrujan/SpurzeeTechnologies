@@ -19,7 +19,7 @@ import {
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import { MarkeAction } from "@/data/types";
 
-// Correct the interface to accept an array of MarketAction
+
 interface MarketTableProps {
     data: MarkeAction[];
 }
