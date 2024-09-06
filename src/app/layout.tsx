@@ -26,14 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} `}
+        className={`${geistSans.variable} ${geistMono.variable} grid h-screen place-items-center  `}
       >
-        <Navbar/>
-        <section className="mx-96">
-        {children}
-        </section>
+        <Navbar />
+        <section className="max-w-[1200px]">{children}</section>
       </body>
     </html>
   );

@@ -9,8 +9,8 @@ interface StockCardProps {
   currentPrice: number;
   highPrice: number;
   lowPrice: number;
-  isUpwardTrend: boolean; 
-};
+  isUpwardTrend: boolean;
+}
 const StockCard: React.FC<StockCardProps> = ({
   stockName,
   change,
@@ -21,14 +21,13 @@ const StockCard: React.FC<StockCardProps> = ({
   isUpwardTrend,
 }) => {
   return (
-    <div className="border p-4 rounded-lg shadow-md max-w-sm bg-white">
+    <div className="border p-4 rounded-lg shadow-md max-w-sm min-w-96 bg-white">
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-lg font-bold">{stockName}</h2>
           <span
-            className={`${
-              isUpwardTrend ? "text-green-500" : "text-red-500"
-            } font-semibold`}
+            className={`${isUpwardTrend ? "text-green-500" : "text-red-500"
+              } font-semibold`}
           >
             {change} ({changePercent}%)
           </span>
@@ -36,12 +35,10 @@ const StockCard: React.FC<StockCardProps> = ({
         <ChartLine className="text-blue-600 w-6 h-6" />
       </div>
 
-      
       <div className="my-4 flex relative  items-center">
         <h1
-          className={`text-2xl font-bold ${
-            isUpwardTrend ? "text-green-600" : "text-red-600"
-          } flex items-center`}
+          className={`text-2xl font-bold ${isUpwardTrend ? "text-green-600" : "text-red-600"
+            } flex items-center`}
         >
           {isUpwardTrend ? (
             <TrendingUp className="mr-2" />
@@ -62,14 +59,10 @@ const StockCard: React.FC<StockCardProps> = ({
         </div>
       </div>
 
-      
       <div className="text-blue-500 flex flex-wrap gap-0.5 text-xs justify-center">
-        <Link href="#">Analytics</Link>|
-        <Link href="#">Options</Link>|
-        <Link href="#">PCR</Link>|
-        <Link href="#">Chain</Link>|
-        <Link href="#">Max pain</Link>|
-        <Link href="#">Movers</Link>|
+        <Link href="#">Analytics</Link>|<Link href="#">Options</Link>|
+        <Link href="#">PCR</Link>|<Link href="#">Chain</Link>|
+        <Link href="#">Max pain</Link>|<Link href="#">Movers</Link>|
         <Link href="#">T-OI</Link>
       </div>
     </div>

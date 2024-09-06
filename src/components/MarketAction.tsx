@@ -1,4 +1,13 @@
 import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Ellipsis } from 'lucide-react';
+import {
     Table,
     TableBody,
     TableCaption,
@@ -6,23 +15,29 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-  } from "@/components/ui/table";
+} from "@/components/ui/table";
 import { ChevronUp, ChevronDown } from 'lucide-react';
+import { MarkeAction } from "@/data/types";
 
-interface MarkeAction {
-    symbol: string;
-    currentprice: number;
-    todayleft: number;
-    todayright: number;
-    change: number;
-    prevclose: number;
-    volume: string;
-    updown: boolean;
-}
-
+// Correct the interface to accept an array of MarketAction
 interface MarketTableProps {
-    data: MarkeAction[]; // Accepts an array of market actions
+    data: MarkeAction[];
 }
+
+const Droupmenu = () => {
+    return (
+        <DropdownMenu>
+            <DropdownMenuTrigger className="p-1 outline-none border-2 rounded-sm border-black">
+                <Ellipsis size={15} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+                <DropdownMenuLabel>Add To Watchlist</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Create Alert</DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+    );
+};
 
 const MarketActionTable: React.FC<MarketTableProps> = ({ data }) => {
     return (
@@ -38,6 +53,7 @@ const MarketActionTable: React.FC<MarketTableProps> = ({ data }) => {
                     <TableHead>Volume</TableHead>
                 </TableRow>
             </TableHeader>
+
             <TableBody>
                 {data.map((item, index) => (
                     <TableRow key={index}>
@@ -45,11 +61,20 @@ const MarketActionTable: React.FC<MarketTableProps> = ({ data }) => {
                         <TableCell>{item.currentprice}</TableCell>
                         <TableCell>{item.todayleft} / {item.todayright}</TableCell>
                         <TableCell className="flex items-center">
-                            <span>{item.updown ? <ChevronUp color="green" size={20} /> : <ChevronDown color="red" size={20} />}</span>
+                            <span>
+                                {item.updown ? (
+                                    <ChevronUp color="green" size={20} />
+                                ) : (
+                                    <ChevronDown color="red" size={20} />
+                                )}
+                            </span>
                             {item.change}%
                         </TableCell>
                         <TableCell>{item.prevclose}</TableCell>
                         <TableCell>{item.volume}</TableCell>
+                        <TableCell>
+                            <Droupmenu />
+                        </TableCell>
                     </TableRow>
                 ))}
             </TableBody>
