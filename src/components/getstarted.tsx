@@ -1,6 +1,6 @@
 import ChartComponent from "./ChartComponent";
 import { Button } from "./ui/button";
-import { ChartCandlestick, ChartPie, CheckCircle, FlagTriangleRight, TrendingUpDown } from 'lucide-react';
+import { ChartCandlestick, ChartPie, FlagTriangleRight, TrendingUpDown } from 'lucide-react';
 
 
 const initialData = [

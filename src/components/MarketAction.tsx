@@ -6,11 +6,11 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Progress } from "@/components/ui/progress";
 import { Ellipsis } from 'lucide-react';
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -19,7 +19,6 @@ import {
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import { MarkeAction } from "@/data/types";
 
-
 interface MarketTableProps {
     data: MarkeAction[];
 }
@@ -27,7 +26,7 @@ interface MarketTableProps {
 const Droupmenu = () => {
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="p-4 font-bold outline-none border-2 rounded-sm border-black">
+            <DropdownMenuTrigger className="p-2 outline-none border rounded-sm border-gray-400">
                 <Ellipsis size={15} />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -36,6 +35,17 @@ const Droupmenu = () => {
                 <DropdownMenuItem>Create Alert</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
+    );
+};
+
+// Correctly destructure the props
+const TodayRange: React.FC<{ todayLeft: number; todayRight: number; progressValue: number; }> = ({ todayLeft, todayRight, progressValue }) => {
+    return (
+        <div className=" grid  grid-cols-3 ">
+            <span className="mr-2">{todayLeft}</span>
+            <Progress value={progressValue} className="w-1/2" />
+            <span className="ml-2">{todayRight}</span>
+        </div>
     );
 };
 
@@ -58,7 +68,13 @@ const MarketActionTable: React.FC<MarketTableProps> = ({ data }) => {
                     <TableRow key={index}>
                         <TableCell className="font-medium">{item.symbol}</TableCell>
                         <TableCell>{item.currentprice}</TableCell>
-                        <TableCell>{item.todayleft} / {item.todayright}</TableCell>
+                        <TableCell>
+                            <TodayRange 
+                                todayLeft={item.todayleft} 
+                                todayRight={item.todayright} 
+                                progressValue={item.todayleft/item.todayright} 
+                            />
+                        </TableCell>
                         <TableCell className="flex items-center">
                             <span>
                                 {item.updown ? (
