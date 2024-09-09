@@ -112,24 +112,22 @@ const Navbar = () => {
                                                     >
                                                         
                                                         <div className="mb-2 mt-4 text-lg font-medium">
-                                                            shadcn/ui
+                                                            
                                                         </div>
                                                         <p className="text-sm leading-tight text-muted-foreground">
-                                                            Beautifully designed components that you can copy and
-                                                            paste into your apps. Accessible. Customizable. Open
-                                                            Source.
+                                                            
                                                         </p>
                                                     </a>
                                                 </NavigationMenuLink>
                                             </li>
                                             <ListItem href="/docs" title="Introduction">
-                                                Re-usable components built using Radix UI and Tailwind CSS.
+                                              
                                             </ListItem>
                                             <ListItem href="/docs/installation" title="Installation">
-                                                How to install dependencies and structure your app.
+                                               
                                             </ListItem>
                                             <ListItem href="/docs/primitives/typography" title="Typography">
-                                                Styles for headings, paragraphs, lists...etc
+                                                
                                             </ListItem>
                                         </ul>
                                     </NavigationMenuContent>
@@ -137,7 +135,7 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger>Support</NavigationMenuTrigger>
                                     <NavigationMenuContent>
-                                        <ul className=" w-[400px]  p-4 md:w-[200px] md:grid-cols-2 lg:w-[300px] ">
+                                        <ul className="  w-[400px]  p-4 md:w-[200px] md:grid-cols-2 lg:w-[300px] ">
                                                 <ListItem 
                                                 title="About"
                                                 href="/about"
