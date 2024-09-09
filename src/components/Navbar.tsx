@@ -1,4 +1,4 @@
-import { NavigationIcon, Search } from "lucide-react";
+import {  Search } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils"
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
+    // NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
+    // NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 
 // const components: { title: string; href: string; description: string }[] = [
@@ -137,10 +137,16 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger>Support</NavigationMenuTrigger>
                                     <NavigationMenuContent>
-                                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                        <ul className=" w-[400px]  p-4 md:w-[200px] md:grid-cols-2 lg:w-[300px] ">
+                                                <ListItem 
+                                                title="About"
+                                                href="/about"
+                                                >
+
+                                                </ListItem>
                                                 <ListItem
                                                     title="User Manual"
-                                                    href="/user-manual"
+                                                    href="/about/user-manual"
                                                 >  
                                                 </ListItem>
                                                 <ListItem
@@ -149,8 +155,8 @@ const Navbar = () => {
                                                 >  
                                                 </ListItem>
                                                 <ListItem
-                                                    title="User Manual"
-                                                    href="/user-manual"
+                                                    title="Contact Us"
+                                                    href="/contact-us"
                                                 >  
                                                 </ListItem>
                                           

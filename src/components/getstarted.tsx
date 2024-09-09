@@ -1,5 +1,7 @@
 import { Button } from "./ui/button";
 import { CheckCircle } from 'lucide-react';
+// import { motion } from "framer-motion"
+
 const GetStarted = () => {
     return (
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 p-6 bg-gray-100 rounded-lg shadow-md">
