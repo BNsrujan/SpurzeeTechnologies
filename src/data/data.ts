@@ -1,4 +1,36 @@
 import { MarkeAction } from "./types";
+import {StockData} from "./types";
+
+export const stockData: StockData[] = [
+  {
+    stockName: "NIFTY BANK",
+    change: "72.80",
+    changePercent: "0.14",
+    currentPrice: 51473.05,
+    highPrice: 51636.75,
+    lowPrice: 51389.15,
+    isUpwardTrend: true,
+  },
+  {
+    stockName: "NIFTY BANK",
+    change: "72.80",
+    changePercent: "0.14",
+    currentPrice: 51473.05,
+    highPrice: 51636.75,
+    lowPrice: 51389.15,
+    isUpwardTrend: true,
+  },
+  {
+    stockName: "NIFTY BANK",
+    change: "72.80",
+    changePercent: "0.14",
+    currentPrice: 51473.05,
+    highPrice: 51636.75,
+    lowPrice: 51389.15,
+    isUpwardTrend: true,
+  },
+];
+
 export const marketData: MarkeAction[] = [
   {
     symbol: "AAPL",

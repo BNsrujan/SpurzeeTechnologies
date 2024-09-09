@@ -27,7 +27,7 @@ interface MarketTableProps {
 const Droupmenu = () => {
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="p-1 outline-none border-2 rounded-sm border-black">
+            <DropdownMenuTrigger className="p-4 font-bold outline-none border-2 rounded-sm border-black">
                 <Ellipsis size={15} />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -42,7 +42,6 @@ const Droupmenu = () => {
 const MarketActionTable: React.FC<MarketTableProps> = ({ data }) => {
     return (
         <Table>
-            <TableCaption>A summary of the market action for selected stocks.</TableCaption>
             <TableHeader>
                 <TableRow>
                     <TableHead className="w-[100px]">Symbol</TableHead>

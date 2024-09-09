@@ -32,8 +32,8 @@ const Marketable = () => {
 
 
       {Object.keys(tabDataMap).map((key) => (
-        <TabsContent key={key} value={key as TabKeys}>
-          <MarketActionTable data={tabDataMap[key as TabKeys]} />
+        <TabsContent key={key} value={key as TabKeys} className="font-semibold  leading-tight">
+          <MarketActionTable  data={tabDataMap[key as TabKeys]} />
         </TabsContent>
       ))}
     </Tabs>

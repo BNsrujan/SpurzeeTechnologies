@@ -11,3 +11,13 @@ export interface MarkeAction {
     updown: boolean;
 }
 
+export interface StockData {
+    stockName: string;
+    change: string;
+    changePercent: string;
+    currentPrice: number;
+    highPrice: number;
+    lowPrice: number;
+    isUpwardTrend: boolean;
+  }
+  

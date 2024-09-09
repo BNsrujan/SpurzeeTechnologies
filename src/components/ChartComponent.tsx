@@ -18,7 +18,7 @@ interface ChartProps {
 const ChartComponent: React.FC<ChartProps> = ({
   data,
   colors: {
-    backgroundColor = "white",
+    backgroundColor ="rgba(255, 255, 255, 0)",
     lineColor = "#2962FF",
     textColor = "black",
     areaTopColor = "#2962FF",
