@@ -27,7 +27,7 @@ A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/BNsrujan/SpurzeeTechnologies
 cd spurzeetechnologies
 ```
 
