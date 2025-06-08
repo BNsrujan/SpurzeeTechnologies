@@ -63,3 +63,5 @@ src/
 
 ## Demo page 
 
+![image](https://github.com/BNsrujan/SpurzeeTechnologies/blob/main/public/image.png)
+
