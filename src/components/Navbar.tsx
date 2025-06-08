@@ -62,7 +62,7 @@ const Navbar = () => {
             <div className="sm:relative flex sm:justify-normal justify-between items-center p-4 mx-24">
                 <div className="flex lg:items-center space-x-2 sm:mx-4">
                     <Link href="/"><Image src="/logo.png" alt="Logo" width={45} height={45} /></Link>
-                    <span className="text-lg font-bold">Spurzee Technologies</span>
+                    <span className="text-lg font-bold">Tradx</span>
                 </div>
 
                 <div className="flex items-center space-x-2 p-2 mx-3  rounded border">

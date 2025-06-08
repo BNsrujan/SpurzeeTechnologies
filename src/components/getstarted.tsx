@@ -27,7 +27,7 @@ const GetStarted = () => {
                     <p className="flex items-center text-gray-600"><TrendingUpDown  className="w-5 h-5 text-gray-500 mr-2" />Limited, well-chosen indicators for accurate signals.</p>
                     <p className="flex items-center text-gray-600"><FlagTriangleRight  className="w-5 h-5 text-gray-500 mr-2" />Find out red flags in your portfolio</p>
                     <p className="flex items-center text-gray-600"><ChartPie  className="w-5 h-5 text-gray-500 mr-2" />Easy date-specific chart viewing
-                    .</p>
+                </p>
                    
                 </div>
                 <Button className="w-full mt-1.5 py-6 text-[16px] font-semibold">Start</Button>
